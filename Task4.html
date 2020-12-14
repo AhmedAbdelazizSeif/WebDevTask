@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>Airport</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript">
+        let notes = ["here you type your first name","here you type your last name",
+            "Here you should type your email and it must contain '@' symbol",
+            "Please click the Choose File button to upload your personal national ID to continue booking your plane",
+            "Please choose the origin place you're at", "please choose the destination", "Please specify a date",
+            "Please specify a time"]
+        function helpNote(notenum){
+            alert(notes[notenum]);
+        }
+
+    </script>
+</head>
+<body>
+<header>
+    <label>احمدعبد العزيز محمد جمعة سيف</label><br>
+    <label>20191479769</label>
+</header>
+<div class="container">
+    <div style="margin-top: 2.25rem">
+        <div style="flex: 0 0 auto; width: 40rem; margin-left: auto; margin-right: auto; margin-top: 0;">
+            <div id="card">
+                <div align="center">
+                    <h3 style="color: white; font-size: larger; font-weight: bold">Book your ticket here</h3>
+                    <hr color="white">
+                </div>
+                <form>
+                    <div class="frm">
+                        <label for="fname">First Name <img class="helper" src="help.png" onmouseover="helpNote(0)"></label>
+                        <input name="fname" class="form-item" id="fname" type="text" placeholder="Type First Name">
+                    </div>
+                    <div class="frm">
+                        <label for="lname">Last Name<img class="helper" src="help.png" onmouseover="helpNote(1)"></label>
+                        <input name="lname" class="form-item " id="lname" type="text" placeholder="Type Last Name">
+                    </div>
+                    <div class="frm">
+                        <label for="email">Email<img class="helper" src="help.png" onmouseover="helpNote(2)"></label>
+                        <input name="email" class="form-item " id="email" type="email" placeholder="Type Email">
+                    </div>
+                    <div class="frm">
+                        <label for="file">ID Number <img class="helper" src="help.png" onmouseover="helpNote(3)"><sub>Please upload your national ID document</sub></label>
+                        <input name="file" class="form-item " id="file" type="file" placeholder="Your National ID">
+                    </div>
+                    <div class="frm">
+                        <label for="from">From<img class="helper" src="help.png" onmouseover="helpNote(4)"></label>
+                        <select class="form-item " name="from" id="from">
+                            <option value="1">Alexandria</option>
+                            <option value="2">Cairo</option>
+                            <option value="2">Sharm Elsheikh</option>
+                        </select>
+                    </div>
+                    <div class="frm">
+                        <label for="to">To<img class="helper" src="help.png" onmouseover="helpNote(5)"></label>
+                        <select class="form-item" name="to" id="to">
+                            <option value="1">Alexandria</option>
+                            <option value="2">Cairo</option>
+                            <option value="2">Sharm Elsheikh</option>
+                        </select>
+                    </div>
+                    <div class="frm">
+                        <label for="date">Take-Off Date<img class="helper" src="help.png" onmouseover="helpNote(6)"></label>
+                        <input class="" id="date" type="date">
+                    </div>
+                    <div class="frm">
+                        <label for="time">Take-Off Time<img class="helper" src="help.png" onmouseover="helpNote(7)"></label>
+                        <input class="" id="time" type="time">
+                    </div>
+                    <div align="center">
+                        <button type="submit">Book</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div align="center">
+    <footer>This is for task 4 in web programming course <br>By Ahmed Seif &copy;</footer>
+</div>
+</body>
+</html>
